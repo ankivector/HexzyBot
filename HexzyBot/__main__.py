@@ -78,13 +78,13 @@ def get_readable_time(seconds: int) -> str:
 PM_START_TEXT = f"""
 Hello, \n I'M emma 
 ɪ'ᴍ ʜᴇʀᴇ ᴛᴏ ʜᴇʟᴘ ʏᴏᴜ ᴍᴀɴᴀɢᴇ ʏᴏᴜʀ[️️ ️](https://telegra.ph/file/02718b2d21493c39d1eee.jpg)ɢʀᴏᴜᴘꜱ! ʜɪᴛ /help
-Maintained by @Im ❤
+Maintained by @SDBOTz ❤
 """
 
 buttons = [
     [
         InlineKeyboardButton(
-            text="➕️ ᴀᴅᴅ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ➕️", url="t.me/HexzyBot?startgroup=true"),
+            text="➕️ ᴀᴅᴅ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ➕️", url="t.me/TheEmma_bot?startgroup=true"),
     ],
     [
         InlineKeyboardButton(text="ᴀʙᴏᴜᴛ", callback_data="hexzy_"),
@@ -93,7 +93,7 @@ buttons = [
         ),
     ],
     [
-        InlineKeyboardButton(text="ʟᴏɢꜱ", url=f"https://t.me/HexzyLogs"),
+        InlineKeyboardButton(text="ʟᴏɢꜱ", url=f"https://t.me/EmmaLogs"),
         InlineKeyboardButton(
             text="System Stats 💻", callback_data="stats_callback"
         ),
@@ -107,7 +107,7 @@ buttons = [
 HELP_STRINGS = """
 `Hi.. I'M` emma    [️️ ️](https://telegra.ph/file/02718b2d21493c39d1eee.jpg)
 `ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʙᴜᴛᴛᴏɴꜱ ʙᴇʟᴏᴡ ᴛᴏ ɢᴇᴛ ᴅᴏᴄᴜᴍᴇɴᴛᴀᴛɪᴏɴ ᴀʙᴏᴜᴛ ꜱᴘᴇᴄɪꜰɪᴄ ᴍᴏᴅᴜʟᴇꜱ..`
-Powered by @HiTechRocket """
+Powered by @SDBOTz """
 
 DONATE_STRING = """Hey, glad to hear you want to donate!
  You can support the project Of [a](t.me/a) \
@@ -357,7 +357,7 @@ def hexzy_about_callback(update, context):
     query = update.callback_query
     if query.data == "hexzy_":
         query.message.edit_text(
-            text=""" ℹ️ I'm *Hexzy*, a powerful group management bot built to help you manage your group easily.
+            text=""" ℹ️ I'm *Emma*, a powerful group management bot built to help you manage your group easily.
                  \n❍ I can restrict users.
                  \n❍ I can greet users with customizable welcome messages and even set a group's rules.
                  \n❍ I have an advanced anti-flood system.
@@ -365,11 +365,11 @@ def hexzy_about_callback(update, context):
                  \n❍ I have a note keeping system, blacklists, and even predetermined replies on certain keywords.
                  \n❍ I check for admins' permissions before executing any command and more stuffs
                  \n\n_Layla's licensed under the GNU General Public License v3.0_
-                 \n❍ Awesome Secret @HiTechRocket
-                 \n❍ Support Group @HiTechRockets
-                 \n❍ Assistant @HexzyAsistant.
-                 \nHere is the [💾Repository](https://github.com/Prabhasha-p/HexzyBot).
-                 \n\nIf you have any question about Hexzy, let us know at .""",
+                 \n❍ Awesome Secret @SDBOTz
+                 \n❍ Support Group @SDBOTz
+                 \n❍ Assistant @EmmaAsistant.
+                 \nHere is the [💾Repository](https://github.com/).
+                 \n\nIf you have any question about Emma, let us know at .""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
@@ -400,8 +400,8 @@ def Source_about_callback(update, context):
     query = update.callback_query
     if query.data == "source_":
         query.message.edit_text(
-            text=""" Hi..🤗 I'm *Hexzy*
-                 \nHere is the [Source Code](https://github.com/Prabhasha-p/HexzyBot) .""",
+            text=""" Hi..🤗 I'm *Emma*
+                 \nHere is the [Source Code](https://github.com/) .""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
