@@ -1,4 +1,4 @@
-__mod_name__ = "⚡️Fake-info⚡️"
+__mod_name__ = "🏆 Fake-info"
 
 __help__ = """
 =>> *Genarate Fake Info xD* 🤫
