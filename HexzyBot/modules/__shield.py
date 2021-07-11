@@ -429,7 +429,7 @@ async def del_profanity(event):
 #
 
 __help__ = """
-<b> Group Guardian: </b>
+* Group Guardian: *
 ✪ Yone can protect your group from NSFW senders, Slag word users and also can force members to use English
 
 <b>Commmands</b>
@@ -440,4 +440,4 @@ __help__ = """
 Note: Special credits goes to Julia project and Friday Project 
  
 """
-__mod_name__ = "⚡️Shield⚡️"
+__mod_name__ = "☃️ Shield"
