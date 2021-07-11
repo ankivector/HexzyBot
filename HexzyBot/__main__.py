@@ -75,14 +75,14 @@ def get_readable_time(seconds: int) -> str:
     return ping_time
 
 
-PM_START_TEXT = f"""Hello, \n I'M Hexzy 
-ɪ'ᴍ ʜᴇʀᴇ ᴛᴏ ʜᴇʟᴘ ʏᴏᴜ ᴍᴀɴᴀɢᴇ ʏᴏᴜʀ[️️ ️](https://telegra.ph/file/9f06565978a17c20794c7.jpg)ɢʀᴏᴜᴘꜱ! ʜɪᴛ /help
-Maintained by @ImPrabhasha ❤"""
+PM_START_TEXT = f"""Hello, \n I'M Emma 
+ɪ'ᴍ ʜᴇʀᴇ ᴛᴏ ʜᴇʟᴘ ʏᴏᴜ ᴍᴀɴᴀɢᴇ ʏᴏᴜʀ[️️ ️](https://telegra.ph/file/02718b2d21493c39d1eee.jpg)ɢʀᴏᴜᴘꜱ! ʜɪᴛ /help
+Maintained by @SDBOTs_inifinity ❤"""
 
 buttons = [
     [
         InlineKeyboardButton(
-            text="➕️ ᴀᴅᴅ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ➕️", url="t.me/HexzyBot?startgroup=true"),
+            text="➕️ ᴀᴅᴅ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ➕️", url="t.me/TheEmma_bot?startgroup=true"),
     ],
     [
         InlineKeyboardButton(text="ᴀʙᴏᴜᴛ", callback_data="hexzy_"),
@@ -91,7 +91,7 @@ buttons = [
         ),
     ],
     [
-        InlineKeyboardButton(text="ʟᴏɢꜱ", url=f"https://t.me/HexzyLogs"),
+        InlineKeyboardButton(text="ʟᴏɢꜱ", url=f"https://t.me/EmmaLogs"),
         InlineKeyboardButton(
             text="System Stats 💻", callback_data="stats_callback"
         ),
@@ -103,13 +103,13 @@ buttons = [
 
 
 HELP_STRINGS = """
-`Hi.. I'M` Hexzy    [️️ ️](https://telegra.ph/file/9f06565978a17c20794c7.jpg)
+`Hi.. I'M` Hexzy    [️️ ️](https://telegra.ph/file/02718b2d21493c39d1eee.jpg)
 `ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʙᴜᴛᴛᴏɴꜱ ʙᴇʟᴏᴡ ᴛᴏ ɢᴇᴛ ᴅᴏᴄᴜᴍᴇɴᴛᴀᴛɪᴏɴ ᴀʙᴏᴜᴛ ꜱᴘᴇᴄɪꜰɪᴄ ᴍᴏᴅᴜʟᴇꜱ..`
-Powered by @HiTechRocket """
+Powered by @SDBOTs_inifinity """
 
 DONATE_STRING = """Hey, glad to hear you want to donate!
- You can support the project Of [𝙋𝙧𝙖𝙗𝙝𝙖𝙨𝙝𝙖 •••](t.me/Prabha_sha) \
- Supporting isnt always financial! [HiTech Rocket](t.me/HiTechRocket) \
+ You can support the project Of [SD BOTz](t.me/SDBOTs_inifinity) \
+ Supporting isnt always financial! [SD Botz Support](t.me/SDBOTz) \
  Those who cannot provide monetary support are welcome to help us develop the bot at ."""
 
 IMPORTED = {}
@@ -363,10 +363,10 @@ def hexzy_about_callback(update, context):
                  \n❍ I have a note keeping system, blacklists, and even predetermined replies on certain keywords.
                  \n❍ I check for admins' permissions before executing any command and more stuffs
                  \n\n_Layla's licensed under the GNU General Public License v3.0_
-                 \n❍ Awesome Secret @HiTechRocket
-                 \n❍ Support Group @HiTechRockets
-                 \n❍ Assistant @HexzyAsistant.
-                 \nHere is the [💾Repository](https://github.com/Prabhasha-p/HexzyBot).
+                 \n❍ Awesome Secret @SDBOTs_inifinity
+                 \n❍ Support Group @SDBOTz
+                 \n❍ Assistant @EmmaAsistant.
+                 \nHere is the [💾Repository](https://github.com/).
                  \n\nIf you have any question about Hexzy, let us know at .""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
@@ -398,8 +398,8 @@ def Source_about_callback(update, context):
     query = update.callback_query
     if query.data == "source_":
         query.message.edit_text(
-            text=""" Hi..🤗 I'm *Hexzy*
-                 \nHere is the [Source Code](https://github.com/Prabhasha-p/HexzyBot) .""",
+            text=""" Hi..🤗 I'm *Emma*
+                 \nHere is the [Source Code](https://github.com/) .""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
