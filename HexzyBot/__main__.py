@@ -76,10 +76,9 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = f"""
-Hello, \n I'M Hexzy ම්
-ɪ'ᴍ ʜᴇʀᴇ ᴛᴏ ʜᴇʟᴘ ʏᴏᴜ ᴍᴀɴᴀɢᴇ ʏᴏᴜʀ[️️ ️](https://telegra.ph/file/9f06565978a17c20794c7.jpg)ɢʀᴏᴜᴘꜱ! ʜɪᴛ /help
-Maintained by @ImPrabhasha ❤
-"""
+හෙලෝ මම එමා
+මම සමූහ කළමනාකරනය රොබෝ වරියෙකි.! [️️ ️](https://telegra.ph/file/9f06565978a17c20794c7.jpg)මාව නිර්මානය
+කලේ  @Damantha_Jasinghe ❤"""
 
 buttons = [
     [
