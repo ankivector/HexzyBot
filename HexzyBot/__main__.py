@@ -76,9 +76,9 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = f"""
-හෙලෝ, \nමම එමා
-මම සමූහ කළමනාකරනය රොබෝ වරියෙකි.! 
-මාව නිර්මානය කලේ  @Damantha_Jasinghe ❤
+Hello, \n I'M Hexzy 
+ɪ'ᴍ ʜᴇʀᴇ ᴛᴏ ʜᴇʟᴘ ʏᴏᴜ ᴍᴀɴᴀɢᴇ ʏᴏᴜʀ[️️ ️](https://telegra.ph/file/9f06565978a17c20794c7.jpg)ɢʀᴏᴜᴘꜱ! ʜɪᴛ /help
+Maintained by @ImPrabhasha ❤
 """
 
 buttons = [
@@ -105,9 +105,14 @@ buttons = [
 
 
 HELP_STRINGS = """
-hi """
+`Hi.. I'M` Hexzy    [️️ ️](https://telegra.ph/file/9f06565978a17c20794c7.jpg)
+`ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʙᴜᴛᴛᴏɴꜱ ʙᴇʟᴏᴡ ᴛᴏ ɢᴇᴛ ᴅᴏᴄᴜᴍᴇɴᴛᴀᴛɪᴏɴ ᴀʙᴏᴜᴛ ꜱᴘᴇᴄɪꜰɪᴄ ᴍᴏᴅᴜʟᴇꜱ..`
+Powered by @HiTechRocket """
 
-DONATE_STRING = """hiiiiiiiiiiiiiiiiiiiiiiiiii"""
+DONATE_STRING = """Hey, glad to hear you want to donate!
+ You can support the project Of [𝙋𝙧𝙖𝙗𝙝𝙖𝙨𝙝𝙖 •••](t.me/Prabha_sha) \
+ Supporting isnt always financial! [HiTech Rocket](t.me/HiTechRocket) \
+ Those who cannot provide monetary support are welcome to help us develop the bot at ."""
 
 IMPORTED = {}
 MIGRATEABLE = []
