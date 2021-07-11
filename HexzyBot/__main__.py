@@ -105,14 +105,9 @@ buttons = [
 
 
 HELP_STRINGS = """
-හායි .. මම හෙක්සි
-පහල බටන් ඔබල මට කරන්න පුලුවන් දේවල් බලන්න ..
-POWERD BY @SDBOTs_inifinity """
+hi """
 
-DONATE_STRING = """හේයි, ඔබට පරිත්‍යාග කිරීමට අවශ්‍ය බව දැනගැනීමට ලැබීම සතුටක්! 
-[SD Botz](https://t.me/SDBOTs_inifinity) \
- ව්‍යාපෘතියට ඔබට සහාය විය හැකිය සහාය දීම සැමවිටම මූල්‍යමය නොවේ! \
- මුදල් ආධාර සැපයිය නොහැකි අය අපට බෝට්ටුව සංවර්ධනය කිරීමට උදව් කිරීමට සාදරයෙන් පිළිගනිමු. ."""
+DONATE_STRING = """hiiiiiiiiiiiiiiiiiiiiiiiiii"""
 
 IMPORTED = {}
 MIGRATEABLE = []
