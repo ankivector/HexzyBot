@@ -425,7 +425,7 @@ will result in restricting that user.
  `1w` = 1 week
  """
 
-__mod_name__ = "⚡️Control⚡️"
+__mod_name__ = "🍿 Control"
 
 FLOOD_BAN_HANDLER = MessageHandler(
     Filters.all & ~Filters.status_update & Filters.group, check_flood
