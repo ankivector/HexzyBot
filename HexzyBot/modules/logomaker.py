@@ -98,13 +98,13 @@ async def lego(event):
     x = (image_widthz-w)/2
     y= ((image_heightz-h)/2+6)
     draw.text((x, y), text, font=font, fill="black", stroke_width=25, stroke_fill="yellow")
-    fname2 = "HexzyLogo.png"
+    fname2 = "EmmaLogo.png"
     img.save(fname2, "png")
-    await tbot.send_file(event.chat_id, fname2, caption="Made By @HexzyBot ⚡️")
+    await tbot.send_file(event.chat_id, fname2, caption="Made By @TheEmma_bot ⚡️")
     if os.path.exists(fname2):
             os.remove(fname2)
  except Exception as e:
-   await event.reply(f'Error Go to Help From  @HiTechRockets, {e}')
+   await event.reply(f'Error Go to Help From @SDBOTz , {e}')
 
 @register(pattern="^/biglogo ?(.*)")
 async def lego(event):
@@ -135,13 +135,13 @@ async def lego(event):
     x = (image_widthz-w)/2
     y= ((image_heightz-h)/2+6)
     draw.text((x, y), text, font=font, fill="black", stroke_width=25, stroke_fill="yellow")
-    fname2 = "HexzyLogo.png"
+    fname2 = "EmmaLogo.png"
     img.save(fname2, "png")
-    await tbot.send_file(event.chat_id, fname2, caption="Made By @HexzyBot ⚡️")
+    await tbot.send_file(event.chat_id, fname2, caption="Made By @TheEmma_bot ⚡️")
     if os.path.exists(fname2):
             os.remove(fname2)
  except Exception as e:
-   await event.reply(f'Error Go to Help From  @HiTechRockets, {e}')
+   await event.reply(f'Error Go to Help From  @SDBOTz, {e}')
 
    
 @register(pattern="^/wlogo ?(.*)")
@@ -175,11 +175,11 @@ async def lego(event):
     draw.text((x, y), text, font=font, fill="white", stroke_width=0, stroke_fill="white")
     fname2 = "HexzyLogo.png"
     img.save(fname2, "png")
-    await tbot.send_file(event.chat_id, fname2, caption="Made By @HexzyBot")
+    await tbot.send_file(event.chat_id, fname2, caption="Made By @TheEmma_bot")
     if os.path.exists(fname2):
             os.remove(fname2)
  except Exception as e:
-   await event.reply(f'Error Go to Help From  @HiTechRockets, {e}')
+   await event.reply(f'Error Go to Help From  @SDBOTz, {e}')
 
 file_help = os.path.basename(__file__)
 file_help = file_help.replace(".py", "")
@@ -192,4 +192,4 @@ __help__ = """
  ❍ /wlogo text :  Create your logo with your name
 
  """
-__mod_name__ = "⚡️Logo⚡️"
+__mod_name__ = "🌆 Logo"
