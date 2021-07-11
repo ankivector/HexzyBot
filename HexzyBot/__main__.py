@@ -76,15 +76,15 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = f"""
-Hello, \n I'M Hexzy 
-ɪ'ᴍ ʜᴇʀᴇ ᴛᴏ ʜᴇʟᴘ ʏᴏᴜ ᴍᴀɴᴀɢᴇ ʏᴏᴜʀ[️️ ️](https://telegra.ph/file/9f06565978a17c20794c7.jpg)ɢʀᴏᴜᴘꜱ! ʜɪᴛ /help
-Maintained by @ImPrabhasha ❤
+හෙලෝ, \nමම එමා
+මම සමූහ කළමනාකරනය රොබෝ වරියෙකි.! 
+මාව නිර්මානය කලේ  @Damantha_Jasinghe ❤
 """
 
 buttons = [
     [
         InlineKeyboardButton(
-            text="➕️ ᴀᴅᴅ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ➕️", url="t.me/HexzyBot?startgroup=true"),
+            text="➕️ ᴀᴅᴅ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ➕️", url="t.me/TheEmma_bot?startgroup=true"),
     ],
     [
         InlineKeyboardButton(text="ᴀʙᴏᴜᴛ", callback_data="hexzy_"),
@@ -93,7 +93,7 @@ buttons = [
         ),
     ],
     [
-        InlineKeyboardButton(text="ʟᴏɢꜱ", url=f"https://t.me/HexzyLogs"),
+        InlineKeyboardButton(text="ʟᴏɢꜱ", url=f"https://t.me/EmmaLogs"),
         InlineKeyboardButton(
             text="System Stats 💻", callback_data="stats_callback"
         ),
@@ -105,14 +105,15 @@ buttons = [
 
 
 HELP_STRINGS = """
-`Hi.. I'M` Hexzy    [️️ ️](https://telegra.ph/file/9f06565978a17c20794c7.jpg)
-`ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʙᴜᴛᴛᴏɴꜱ ʙᴇʟᴏᴡ ᴛᴏ ɢᴇᴛ ᴅᴏᴄᴜᴍᴇɴᴛᴀᴛɪᴏɴ ᴀʙᴏᴜᴛ ꜱᴘᴇᴄɪꜰɪᴄ ᴍᴏᴅᴜʟᴇꜱ..`
-Powered by @HiTechRocket """
+හායි .. මම හෙක්සි
+පහල බටන් ඔබල මට කරන්න පුලුවන් දේවල් බලන්න ..
+POWERD BY @SDBOTs_inifinity """
 
-DONATE_STRING = """Hey, glad to hear you want to donate!
- You can support the project Of [𝙋𝙧𝙖𝙗𝙝𝙖𝙨𝙝𝙖 •••](t.me/Prabha_sha) \
- Supporting isnt always financial! [HiTech Rocket](t.me/HiTechRocket) \
- Those who cannot provide monetary support are welcome to help us develop the bot at ."""
+DONATE_STRING = """හේයි, ඔබට පරිත්‍යාග කිරීමට අවශ්‍ය බව දැනගැනීමට ලැබීම සතුටක්! 
+[SD Botz](https://t.me/SDBOTs_inifinity) \
+ ව්‍යාපෘතියට ඔබට සහාය විය හැකිය \
+ සහාය දීම සැමවිටම මූල්‍යමය නොවේ! \
+ මුදල් ආධාර සැපයිය නොහැකි අය අපට බෝට්ටුව සංවර්ධනය කිරීමට උදව් කිරීමට සාදරයෙන් පිළිගනිමු."""
 
 IMPORTED = {}
 MIGRATEABLE = []
@@ -197,7 +198,7 @@ def start(update: Update, context: CallbackContext):
                     update.effective_chat.id,
                     HELPABLE[mod].__help__,
                     InlineKeyboardMarkup(
-                        [[InlineKeyboardButton(text="⬅️ BACK", callback_data="help_back")]]
+                        [[InlineKeyboardButton(text="⬅️ ආපසු", callback_data="help_back")]]
                     ),
                 )
 
@@ -222,7 +223,7 @@ def start(update: Update, context: CallbackContext):
             )
     else:
         update.effective_message.reply_text(
-            "I'm awake already!\n<b>Haven't slept since:</b> <code>{}</code>".format(
+            "මම දැනටමත් අවදියෙන් සිටිමි! \ N <b> එතැන් සිට නිදාගෙන නැත: </ b> <code> {} </code>".format(
                 uptime
             ),
             parse_mode=ParseMode.HTML,
@@ -230,9 +231,9 @@ def start(update: Update, context: CallbackContext):
 
 
 def error_handler(update, context):
-    """Log the error and send a telegram message to notify the developer."""
+    """සංවර්ධකයාට දැනුම් දීම සඳහා දෝෂය සටහන් කර විදුලි පණිවුඩයක් යවන්න."""
     # Log the error before we do anything else, so we can see it even if something breaks.
-    LOGGER.error(msg="Exception while handling an update:", exc_info=context.error)
+    LOGGER.error(msg="යාවත්කාලීනයක් හැසිරවීමේදී ව්‍යතිරේකය:", exc_info=context.error)
 
     # traceback.format_exception returns the usual python message about an exception, but as a
     # list of strings rather than a single string, so we have to join them together.
@@ -301,7 +302,7 @@ def help_button(update, context):
         if mod_match:
             module = mod_match.group(1)
             text = (
-                "Here is the help for the *{}* module:\n".format(
+                "මෙන්න * {} * මොඩියුලය සඳහා උපකාරය:\n".format(
                     HELPABLE[module].__mod_name__
                 )
                 + HELPABLE[module].__help__
@@ -311,7 +312,7 @@ def help_button(update, context):
                 parse_mode=ParseMode.MARKDOWN,
                 disable_web_page_preview=True,
                 reply_markup=InlineKeyboardMarkup(
-                    [[InlineKeyboardButton(text="Back", callback_data="help_back")]]
+                    [[InlineKeyboardButton(text="ආපසු", callback_data="help_back")]]
                 ),
             )
 
@@ -357,19 +358,17 @@ def hexzy_about_callback(update, context):
     query = update.callback_query
     if query.data == "hexzy_":
         query.message.edit_text(
-            text=""" ℹ️ I'm *Hexzy*, a powerful group management bot built to help you manage your group easily.
-                 \n❍ I can restrict users.
-                 \n❍ I can greet users with customizable welcome messages and even set a group's rules.
-                 \n❍ I have an advanced anti-flood system.
-                 \n❍ I can warn users until they reach max warns, with each predefined actions such as ban, mute, kick, etc.
-                 \n❍ I have a note keeping system, blacklists, and even predetermined replies on certain keywords.
-                 \n❍ I check for admins' permissions before executing any command and more stuffs
-                 \n\n_Layla's licensed under the GNU General Public License v3.0_
-                 \n❍ Awesome Secret @HiTechRocket
-                 \n❍ Support Group @HiTechRockets
-                 \n❍ Assistant @HexzyAsistant.
-                 \nHere is the [💾Repository](https://github.com/Prabhasha-p/HexzyBot).
-                 \n\nIf you have any question about Hexzy, let us know at .""",
+            text=""" ℹ️ මම * එමා *, ඔබේ කණ්ඩායම පහසුවෙන් කළමනාකරණය කිරීමට ඔබට උපකාර කිරීම සඳහා ගොඩනගා ඇති ප්‍රබල කණ්ඩායම් කළමනාකරණ බොට්.
+                 \n❍ මට පරිශීලකයින් සීමා කළ හැකිය.
+                 \n❍ මට අභිරුචිකරණය කළ හැකි පිළිගැනීමේ පණිවිඩ සමඟ පරිශීලකයින්ට ආචාර කළ හැකි අතර කණ්ඩායමේ නීති පවා සැකසිය හැකිය.
+                 \n❍ මට උසස් ගංවතුර විරෝධී පද්ධතියක් ඇත.
+                 \n❍ තහනම, නිශ්ශබ්දතාව, පයින් ගැසීම වැනි පූර්ව නිශ්චිත ක්‍රියාවන් සමඟ පරිශීලකයින්ට උපරිම අනතුරු ඇඟවීම් ලබා ගන්නා තෙක් මට අනතුරු ඇඟවිය හැකිය.
+                 \n❍ මට සටහන් තබා ගැනීමේ පද්ධතියක්, අසාදු ලේඛණ සහ ඇතැම් මූල පදවල කලින් තීරණය කළ පිළිතුරු පවා ඇත.
+                 \n❍ ඕනෑම විධානයක් සහ තවත් දේවල් ක්‍රියාත්මක කිරීමට පෙර මම පරිපාලකවරුන්ගේ අවසරයන් පරීක්ෂා කරමි
+                 \n❍ නියම රහස @SDBOTs_inifinity
+                 \n❍ ආධාරක කණ්ඩායම @SDBOTs_inifinity
+                 \n❍ සහකාර e හෙක්සි ඇසිස්ට්.
+                 \n ඔබට හෙක්සි ගැන කිසියම් ප්‍රශ්නයක් ඇත්නම්, අපට දන්වන්න.""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
@@ -400,8 +399,8 @@ def Source_about_callback(update, context):
     query = update.callback_query
     if query.data == "source_":
         query.message.edit_text(
-            text=""" Hi..🤗 I'm *Hexzy*
-                 \nHere is the [Source Code](https://github.com/Prabhasha-p/HexzyBot) .""",
+            text=""" Hi..🤗 I'm *එමා*
+                 \nHere is the [Source Code](https://github.com/) .""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
@@ -447,7 +446,7 @@ def get_help(update: Update, context: CallbackContext):
             )
             return
         update.effective_message.reply_text(
-            "Contact me in PM to get the list of possible commands.",
+            "හැකි විධාන ලැයිස්තුවක් ලබා ගැනීමට PM හි මා අමතන්න.",
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
@@ -464,7 +463,7 @@ def get_help(update: Update, context: CallbackContext):
     elif len(args) >= 2 and any(args[1].lower() == x for x in HELPABLE):
         module = args[1].lower()
         text = (
-            "Here is the available help for the *{}* module:\n".format(
+            "* {} * මොඩියුලය සඳහා ඇති උපකාර මෙන්න:\n".format(
                 HELPABLE[module].__mod_name__
             )
             + HELPABLE[module].__help__
@@ -473,7 +472,7 @@ def get_help(update: Update, context: CallbackContext):
             chat.id,
             text,
             InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="Back", callback_data="help_back")]]
+                [[InlineKeyboardButton(text="ආපසු", callback_data="help_back")]]
             ),
         )
 
@@ -490,14 +489,14 @@ def send_settings(chat_id, user_id, user=False):
             )
             dispatcher.bot.send_message(
                 user_id,
-                "These are your current settings:" + "\n\n" + settings,
+                "මේවා ඔබගේ වර්තමාන සැකසුම් වේ:" + "\n\n" + settings,
                 parse_mode=ParseMode.MARKDOWN,
             )
 
         else:
             dispatcher.bot.send_message(
                 user_id,
-                "Seems like there aren't any user specific settings available :'(",
+                "පරිශීලක විශේෂිත සැකසුම් නොමැති බව පෙනේ:'(",
                 parse_mode=ParseMode.MARKDOWN,
             )
 
@@ -506,7 +505,7 @@ def send_settings(chat_id, user_id, user=False):
             chat_name = dispatcher.bot.getChat(chat_id).title
             dispatcher.bot.send_message(
                 user_id,
-                text="Which module would you like to check {}'s settings for?".format(
+                text="කුමන සැකසුම සඳහා සැකසීම් පරීක්ෂා කිරීමට ඔබ කැමතිද?".format(
                     chat_name
                 ),
                 reply_markup=InlineKeyboardMarkup(
@@ -516,8 +515,8 @@ def send_settings(chat_id, user_id, user=False):
         else:
             dispatcher.bot.send_message(
                 user_id,
-                "Seems like there aren't any chat settings available :'(\nSend this "
-                "in a group chat you're admin in to find its current settings!",
+                "චැට් සැකසුම් කිසිවක් නොමැති බව පෙනේ: '(\ n මෙය යවන්න"
+                "කණ්ඩායම් සංවාදයකදී ඔබ එහි වර්තමාන සැකසුම් සොයා ගැනීමට පරිපාලක වේ!",
                 parse_mode=ParseMode.MARKDOWN,
             )
 
@@ -559,8 +558,8 @@ def settings_button(update: Update, context: CallbackContext):
             curr_page = int(prev_match.group(2))
             chat = bot.get_chat(chat_id)
             query.message.reply_text(
-                "Hi there! There are quite a few settings for {} - go ahead and pick what "
-                "you're interested in.".format(chat.title),
+                "ආයුබෝවන් කොහොම ද! {} - සඳහා සැකසුම් කිහිපයක් තිබේ - ඉදිරියට ගොස් කුමක් තෝරා ගන්න"
+                "ඔබ උනන්දුයි.".format(chat.title),
                 reply_markup=InlineKeyboardMarkup(
                     paginate_modules(
                         curr_page - 1, CHAT_SETTINGS, "stngs", chat=chat_id
@@ -573,8 +572,8 @@ def settings_button(update: Update, context: CallbackContext):
             next_page = int(next_match.group(2))
             chat = bot.get_chat(chat_id)
             query.message.reply_text(
-                "Hi there! There are quite a few settings for {} - go ahead and pick what "
-                "you're interested in.".format(chat.title),
+                "ආයුබෝවන් කොහොම ද! {} - සඳහා සැකසුම් කිහිපයක් තිබේ - ඉදිරියට ගොස් කුමක් තෝරා ගන්න"
+                "ඔබ උනන්දුයි.".format(chat.title),
                 reply_markup=InlineKeyboardMarkup(
                     paginate_modules(
                         next_page + 1, CHAT_SETTINGS, "stngs", chat=chat_id
@@ -586,8 +585,8 @@ def settings_button(update: Update, context: CallbackContext):
             chat_id = back_match.group(1)
             chat = bot.get_chat(chat_id)
             query.message.reply_text(
-                text="Hi there! There are quite a few settings for {} - go ahead and pick what "
-                "you're interested in.".format(escape_markdown(chat.title)),
+                text="ආයුබෝවන් කොහොම ද! {} - සඳහා සැකසුම් කිහිපයක් තිබේ - ඉදිරියට ගොස් කුමක් තෝරා ගන්න"
+                "ඔබ උනන්දුයි.".format(escape_markdown(chat.title)),
                 parse_mode=ParseMode.MARKDOWN,
                 reply_markup=InlineKeyboardMarkup(
                     paginate_modules(0, CHAT_SETTINGS, "stngs", chat=chat_id)
@@ -599,11 +598,11 @@ def settings_button(update: Update, context: CallbackContext):
         query.message.delete()
     except BadRequest as excp:
         if excp.message not in [
-            "Message is not modified",
-            "Query_id_invalid",
-            "Message can't be deleted",
+            "පණිවිඩය වෙනස් කර නොමැත",
+            "විමසුම_අයිඩ්_ අවලංගුය",
+            "පණිවිඩය මකා දැමිය නොහැක",
         ]:
-            LOGGER.exception("Exception in settings buttons. %s", str(query.data))
+            LOGGER.exception("සැකසුම් බොත්තම් වල ව්‍යතිරේකය. %s", str(query.data))
 
 
 @run_async
@@ -615,14 +614,14 @@ def get_settings(update: Update, context: CallbackContext):
     # ONLY send settings in PM
     if chat.type != chat.PRIVATE:
         if is_user_admin(chat, user.id):
-            text = "Click here to get this chat's settings, as well as yours."
+            text = "මෙම කතාබස් සැකසීම් මෙන්ම ඔබගේද ලබා ගැනීමට මෙතන ක්ලික් කරන්න."
             msg.reply_text(
                 text,
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
                             InlineKeyboardButton(
-                                text="Settings",
+                                text="සැකසුම්",
                                 url="t.me/{}?start=stngs_{}".format(
                                     context.bot.username, chat.id
                                 ),
@@ -632,7 +631,7 @@ def get_settings(update: Update, context: CallbackContext):
                 ),
             )
         else:
-            text = "Click here to check your settings."
+            text = "ඔබගේ සැකසුම් පරීක්ෂා කිරීමට මෙහි ක්ලික් කරන්න."
 
     else:
         send_settings(chat.id, user.id, True)
@@ -650,7 +649,7 @@ def donate(update: Update, context: CallbackContext):
 
         if OWNER_ID != 254318997 and DONATION_LINK:
             update.effective_message.reply_text(
-                "You can also donate to the person currently running me "
+                "දැනට මා පවත්වාගෙන යන පුද්ගලයාට ද ඔබට පරිත්‍යාග කළ හැකිය"
                 "[here]({})".format(DONATION_LINK),
                 parse_mode=ParseMode.MARKDOWN,
             )
@@ -665,7 +664,7 @@ def donate(update: Update, context: CallbackContext):
             )
 
             update.effective_message.reply_text(
-                "I've PM'ed you about donating to my creator!"
+                "මගේ නිර්මාණකරුට පරිත්‍යාග කිරීම ගැන මම ඔබට අගමැති කර ඇත්තෙමි!"
             )
         except Unauthorized:
             update.effective_message.reply_text(
